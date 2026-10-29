@@ -1,0 +1,1 @@
+A logo original não foi fornecida com o briefing. Adicione logo.png aqui quando estiver disponível. As prévias de projeto são ilustrativas e devem ser substituídas por capturas reais antes da publicação.

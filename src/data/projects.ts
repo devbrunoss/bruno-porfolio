@@ -1,0 +1,13 @@
+export type Project = {
+ slug: string; name: string; description: string; url: string;
+ repository?: string; technologies?: string[]; previewTitle: string;
+ previewSubtitle: string; mark: string; featured?: boolean;
+};
+
+export const projects: Project[] = [
+ { slug:"trackcrypto", name:"TrackCrypto", description:"Projeto voltado ao mercado de criptomoedas, com uma interface dedicada ao acompanhamento do mercado e à apresentação de informações e ferramentas relacionadas a ativos digitais.", url:"https://devbrunoss.github.io/trackcrypto/", repository:"https://github.com/devbrunoss/trackcrypto-v4", technologies:["HTML", "CSS", "JavaScript"], previewTitle:"TrackCrypto", previewSubtitle:"CRYPTO MARKET / ASSETS", mark:"₿", featured:true },
+ { slug:"qual-jogo-hoje", name:"Qual Jogo Hoje", description:"Uma aplicação interativa criada para ajudar jogadores a decidir o que jogar. O projeto reúne ferramentas e mecânicas para tornar essa escolha mais divertida.", url:"https://devbrunoss.github.io/qual-jogo-hoje/", repository:"https://github.com/devbrunoss/qual-jogo-hoje", technologies:["HTML", "CSS", "JavaScript", "SQL"], previewTitle:"Qual jogo hoje?", previewSubtitle:"ENCONTRE SUA PRÓXIMA PARTIDA", mark:"?" },
+ { slug:"infinity-electronics", name:"Infinity Electronics", description:"Modelo demonstrativo de uma loja de tecnologia, desenvolvido para explorar a apresentação de produtos, a organização de um catálogo e a experiência visual de um e-commerce. Projeto demonstrativo, não uma loja operacional.", url:"https://devbrunoss.github.io/infinityeletronics/", technologies:["HTML", "CSS", "JavaScript"], previewTitle:"Infinity Electronics", previewSubtitle:"TECH / CATALOG", mark:"∞" },
+ { slug:"dopamine-clicker", name:"Dopamine Clicker", description:"Um mini game experimental baseado em cliques, criado para explorar interatividade, pontuação e elementos de gamificação em uma experiência simples e divertida.", url:"https://devbrunoss.github.io/DOPAMINE-CLICKER/", technologies:["JavaScript", "CSS", "HTML"], previewTitle:"Dopamine Clicker", previewSubtitle:"CLICK / SCORE / REPEAT", mark:"+" },
+ { slug:"bsdev-store", name:"BSDev Store", description:"Landing page demonstrativa com foco na apresentação visual de produtos de tecnologia, explorando animações, composição de layout e elementos promocionais.", url:"https://devbrunoss.github.io/landing-page-animacoes/", technologies:["CSS", "HTML", "JavaScript"], previewTitle:"BSDev Store", previewSubtitle:"TECH GOODS / FEATURED", mark:"BS" }
+];
