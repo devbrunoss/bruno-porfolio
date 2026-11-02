@@ -174,3 +174,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 /* Seção Sobre integrada à página inicial */
 #sobre{scroll-margin-top:90px;border-top:1px solid var(--line);padding-top:72px;margin-top:0}
 @media(max-width:760px){#sobre{padding-top:48px}}
+html{scroll-behavior:smooth}
+.project-nav{display:flex;flex-wrap:wrap;gap:10px;margin:-24px 0 48px}
+.project-nav a{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:#0b0b0b;color:var(--muted);font-size:12px;transition:border-color .2s,color .2s}
+.project-nav a:hover{color:var(--text);border-color:#3b3b3b}
+.project-nav a span{font-family:monospace;font-size:10px;color:var(--green)}
+.project-section{scroll-margin-top:90px;margin-bottom:72px}
+.project-section:last-child{margin-bottom:0}
+.project-section-head{max-width:620px;margin-bottom:28px;padding-top:28px;border-top:1px solid var(--border)}
+.project-section-head .eyebrow{margin-bottom:12px;color:var(--green)}
+.project-section-head h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;letter-spacing:-.05em;font-weight:500;margin:0}
+.project-section-head p:last-child{font-size:13px;line-height:1.8;color:var(--muted);margin:12px 0 0}

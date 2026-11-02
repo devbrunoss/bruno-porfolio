@@ -1,5 +1,40 @@
+export type ProjectCategory = "fullstack" | "ciberseguranca" | "web";
+
+export type CategoryInfo = {
+  id: ProjectCategory;
+  title: string;
+  eyebrow: string;
+  description: string;
+};
+
+// A ordem desta lista define a ordem das seções na página
+export const categories: CategoryInfo[] = [
+  {
+    id: "fullstack",
+    title: "Full Stack",
+    eyebrow: "APLICAÇÕES COMPLETAS",
+    description:
+      "Aplicações com autenticação, banco de dados e deploy, cobrindo do front-end ao back-end.",
+  },
+  {
+    id: "ciberseguranca",
+    title: "Cibersegurança",
+    eyebrow: "SEGURANÇA DEFENSIVA",
+    description:
+      "Projetos focados em práticas defensivas, análise de segurança web e monitoramento de logs.",
+  },
+  {
+    id: "web",
+    title: "Desenvolvimento Web",
+    eyebrow: "FRONT-END",
+    description:
+      "Interfaces e experimentos com HTML, CSS e JavaScript, focados em layout, interatividade e experiência do usuário.",
+  },
+];
+
 export type Project = {
   slug: string;
+  category: ProjectCategory;
   name: string;
   description: string;
   url: string;
@@ -14,6 +49,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "trackcrypto",
+    category: "web",
     name: "TrackCrypto",
     description:
       "Projeto voltado ao mercado de criptomoedas, com uma interface dedicada ao acompanhamento do mercado e à apresentação de informações relacionadas a ativos digitais.",
@@ -27,6 +63,7 @@ export const projects: Project[] = [
   },
   {
     slug: "qual-jogo-hoje",
+    category: "web",
     name: "Qual Jogo Hoje",
     description:
       "Aplicação interativa criada para ajudar jogadores a decidir o que jogar, explorando lógica de programação, interatividade e experiência do usuário.",
@@ -39,6 +76,7 @@ export const projects: Project[] = [
   },
   {
     slug: "infinity-electronics",
+    category: "web",
     name: "Infinity Electronics",
     description:
       "Projeto demonstrativo de uma loja de tecnologia, com foco na apresentação de produtos, organização de catálogo e experiência visual de um e-commerce.",
@@ -50,6 +88,7 @@ export const projects: Project[] = [
   },
   {
     slug: "dopamine-clicker",
+    category: "web",
     name: "Dopamine Clicker",
     description:
       "Mini game experimental baseado em cliques, desenvolvido para explorar interatividade, pontuação e elementos de gamificação.",
@@ -61,6 +100,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bsdev-store",
+    category: "web",
     name: "BSDev Store",
     description:
       "Landing page demonstrativa com foco na apresentação visual de produtos de tecnologia, animações, composição de layout e elementos promocionais.",
@@ -72,6 +112,7 @@ export const projects: Project[] = [
   },
   {
     slug: "financeflow",
+    category: "fullstack",
     name: "FinanceFlow",
     description:
       "Aplicação Full Stack de gestão financeira, com interface para acompanhamento de informações financeiras e recursos de autenticação e persistência de dados.",
@@ -97,6 +138,7 @@ export const projects: Project[] = [
   },
   {
     slug: "devtask",
+    category: "fullstack",
     name: "DevTask",
     description:
       "Aplicação Full Stack para organização de tarefas, com autenticação, validação de dados e persistência em banco de dados relacional.",
@@ -120,6 +162,7 @@ export const projects: Project[] = [
   },
   {
     slug: "websecure",
+    category: "ciberseguranca",
     name: "WebSecure",
     description:
       "Projeto de segurança web desenvolvido com Python e Flask, com foco em práticas defensivas, análise de aspectos de segurança e apresentação de resultados.",
@@ -133,6 +176,7 @@ export const projects: Project[] = [
   },
   {
     slug: "logsentinel",
+    category: "ciberseguranca",
     name: "LogSentinel",
     description:
       "Ferramenta de análise de logs com Python e Streamlit, voltada à exploração de registros, organização de eventos e identificação de padrões relevantes para monitoramento.",
