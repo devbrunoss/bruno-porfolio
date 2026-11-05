@@ -4,7 +4,6 @@ import { Code2 } from "lucide-react";
 export function AboutSection() {
   return <div id="sobre" className="about-page shell">
     <section className="about-intro" aria-labelledby="about-title">
-      <p className="about-kicker">QUEM SOU EU</p>
       <h2 id="about-title">Sobre mim</h2>
       <div className="about-intro-copy">
         <p>Sou Bruno Santos e estudo cibersegurança com foco em segurança defensiva e segurança de aplicações (AppSec). Meu portfólio reúne ferramentas para análise de logs, identificação de possíveis segredos e avaliação de configurações HTTP/HTTPS.</p>

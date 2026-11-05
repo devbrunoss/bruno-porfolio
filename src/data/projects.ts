@@ -23,6 +23,7 @@ export const projects: Project[] = [
   {
     slug: "secrethunter", category: "ciberseguranca", name: "SecretHunter",
     description: "CLI em Python para identificar possíveis segredos em arquivos e no histórico Git. Inclui ocultação de valores, baseline para comparação e relatórios JSON/SARIF.",
+    url: "https://devbrunoss.github.io/SecretHunter/",
     repository: "https://github.com/devbrunoss/SecretHunter",
     technologies: ["Python", "Git", "JSON", "SARIF"],
     previewTitle: "SecretHunter", previewSubtitle: "ARQUIVOS → ACHADOS → TRIAGEM", mark: "SH", featured: true,
@@ -32,6 +33,7 @@ export const projects: Project[] = [
   {
     slug: "logsentinel", category: "ciberseguranca", name: "LogSentinel",
     description: "Analisador local de logs CSV/JSONL, com interface Streamlit e regras determinísticas para falhas de autenticação, concentração de eventos e condições personalizadas.",
+    url: "https://logsentinel-devbrunoss.streamlit.app/",
     repository: "https://github.com/devbrunoss/logsentinel",
     technologies: ["Python", "Streamlit", "Pandas", "pytest"],
     previewTitle: "LogSentinel", previewSubtitle: "LOGS → REGRAS → ALERTAS", mark: "LS", featured: true,
@@ -41,6 +43,7 @@ export const projects: Project[] = [
   {
     slug: "websecure", category: "ciberseguranca", name: "WebSecure",
     description: "Scanner defensivo de configuração HTTP/HTTPS. Analisa cabeçalhos de segurança e atributos de cookies, valida destinos e redirecionamentos e exporta relatórios JSON/HTML.",
+    url: "https://websecure-78zh.onrender.com/",
     repository: "https://github.com/devbrunoss/websecure",
     technologies: ["Python", "HTTP/HTTPS", "JSON", "pytest"],
     previewTitle: "WebSecure", previewSubtitle: "HTTP/HTTPS → ANÁLISE → RELATÓRIO", mark: "WS", featured: true,

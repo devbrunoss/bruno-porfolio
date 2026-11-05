@@ -9,7 +9,7 @@ Portfólio pessoal com foco em cibersegurança defensiva, segurança de aplicaç
 - Projetos: SecretHunter, LogSentinel, WebSecure, DevTask e FinanceFlow.
 - Contato: GitHub, LinkedIn e e-mail.
 
-As artes dos projetos são composições gráficas, não capturas de execução. As ferramentas de segurança apontam para os respectivos repositórios, onde estão as instruções de uso e limitações. Os projetos iniciais de HTML/CSS continuam em seus próprios repositórios.
+As artes dos projetos são composições gráficas, não capturas de execução. As ferramentas de segurança oferecem links para demonstrações e para os respectivos repositórios, onde estão as instruções de uso e limitações. Os projetos iniciais de HTML/CSS continuam em seus próprios repositórios.
 
 ## Desenvolvimento local
 

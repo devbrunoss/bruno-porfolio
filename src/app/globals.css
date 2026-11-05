@@ -201,3 +201,6 @@ html{scroll-behavior:smooth}
 .home-project-card .text-link{margin-top:auto}
 .all-projects{margin-top:26px}
 @media(max-width:760px){.home-project-grid{grid-template-columns:1fr}.home-projects{padding-bottom:48px}}
+
+.home-project-links{margin-top:auto;display:flex;flex-wrap:wrap;gap:14px 20px}
+.home-project-links .text-link{margin-top:0}
