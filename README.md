@@ -6,7 +6,7 @@ Portfólio pessoal com foco em cibersegurança defensiva, segurança de aplicaç
 
 - Início: apresentação e três projetos de segurança em destaque.
 - Sobre: estudos, tecnologias e participação com apoio de IA.
-- Projetos: SecretHunter, LogSentinel, WebSecure, DevTask e FinanceFlow.
+- Projetos: SecretHunter, LogSentinel, WebSecure, ForenseLab, DevTask e FinanceFlow.
 - Contato: GitHub, LinkedIn e e-mail.
 
 As artes dos projetos são composições gráficas, não capturas de execução. As ferramentas de segurança oferecem links para demonstrações e para os respectivos repositórios, onde estão as instruções de uso e limitações. Os projetos iniciais de HTML/CSS continuam em seus próprios repositórios.

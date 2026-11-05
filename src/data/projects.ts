@@ -1,7 +1,7 @@
 export type ProjectCategory = "ciberseguranca" | "fullstack";
 export type CategoryInfo = { id: ProjectCategory; title: string; eyebrow: string; description: string };
 export const categories: CategoryInfo[] = [
-  { id: "ciberseguranca", title: "Cibersegurança", eyebrow: "SEGURANÇA DEFENSIVA E APPSEC", description: "Ferramentas educacionais para análise de logs, possíveis segredos e configurações HTTP/HTTPS. Os achados exigem revisão humana." },
+  { id: "ciberseguranca", title: "Cibersegurança", eyebrow: "SEGURANÇA DEFENSIVA E APPSEC", description: "Projetos educacionais de segurança defensiva, AppSec e investigação digital. Resultados e registros exigem revisão humana." },
   { id: "fullstack", title: "Desenvolvimento Full Stack", eyebrow: "APLICAÇÕES WEB", description: "Projetos para estudar autenticação, validação no servidor e controle de acesso por usuário." },
 ];
 export type Project = {
@@ -49,6 +49,16 @@ export const projects: Project[] = [
     previewTitle: "WebSecure", previewSubtitle: "HTTP/HTTPS → ANÁLISE → RELATÓRIO", mark: "WS", featured: true,
     scope: "Para sites próprios ou autorizados. Os achados são heurísticos e não comprovam vulnerabilidades exploráveis.",
     highlights: ["Cabeçalhos e atributos de cookies", "Validação de destinos e redirects", "CLI e interface local"],
+  },
+  {
+    slug: "forenselab", category: "ciberseguranca", name: "ForenseLab",
+    description: "Plataforma educacional de investigação digital para organizar casos e evidências, verificar integridade por SHA-256 e acompanhar a linha do tempo das análises.",
+    url: "https://forenselab-web.onrender.com/",
+    repository: "https://github.com/devbrunoss/ForenseLab",
+    technologies: ["Python", "FastAPI", "React", "TypeScript", "SQLite", "SHA-256"],
+    previewTitle: "ForenseLab", previewSubtitle: "CASOS / EVIDÊNCIAS / INTEGRIDADE", mark: "FL",
+    scope: "Demo compartilhada, sem isolamento entre visitantes. Use apenas arquivos fictícios. O hash não comprova autenticidade nem cadeia de custódia formal.",
+    highlights: ["Registro de casos e evidências", "Verificação SHA-256 e histórico de auditoria", "Linha do tempo e relatórios HTML/JSON"],
   },
   {
     slug: "devtask", category: "fullstack", name: "DevTask",

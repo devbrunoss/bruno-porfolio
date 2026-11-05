@@ -26,7 +26,7 @@ export default function HomePage() {
           <div className="home-project-links"><Link className="text-link" href={project.repository} target="_blank" rel="noopener noreferrer">Código e documentação <ArrowUpRight size={16}/><span className="sr-only"> de {project.name} (nova aba)</span></Link>{project.url && <Link className="text-link secondary-link" href={project.url} target="_blank" rel="noopener noreferrer">Demonstração <ArrowUpRight size={16}/><span className="sr-only"> de {project.name} (nova aba)</span></Link>}</div>
         </article>
       ))}</div>
-      <Link className="text-link all-projects" href="/projetos">Ver os cinco projetos <MoveRight size={16}/></Link>
+      <Link className="text-link all-projects" href="/projetos">Ver todos os projetos <MoveRight size={16}/></Link>
     </section>
     <AboutSection />
     </>
