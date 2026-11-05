@@ -1,39 +1,38 @@
 # Bruno Santos — Portfólio
 
-Portfólio em Next.js, React, TypeScript e Tailwind CSS 4, preparado para exportação estática e publicação gratuita no GitHub Pages. Não precisa manter servidor rodando.
+Portfólio pessoal com foco em cibersegurança defensiva, segurança de aplicações e aprendizado em desenvolvimento Full Stack.
 
-## Rodar no computador
+## Conteúdo
 
-Requer Node.js 20.9+ e npm.
+- Início: apresentação e três projetos de segurança em destaque.
+- Sobre: estudos, tecnologias e participação com apoio de IA.
+- Projetos: SecretHunter, LogSentinel, WebSecure, ForenseLab, DevTask e FinanceFlow.
+- Contato: GitHub, LinkedIn e e-mail.
 
-```bash
-npm install
+As artes dos projetos são composições gráficas, não capturas de execução. As ferramentas de segurança oferecem links para demonstrações e para os respectivos repositórios, onde estão as instruções de uso e limitações. Os projetos iniciais de HTML/CSS continuam em seus próprios repositórios.
+
+## Desenvolvimento local
+
+Requer Node.js 20 ou superior e npm.
+
+```sh
+npm ci
 npm run dev
 ```
 
-Abra http://localhost:3000.
+## Verificação e build
 
-## Gerar a versão estática
-
-```bash
-npm install
+```sh
+npm run typecheck
 npm run build
 ```
 
-O site pronto para hospedagem será criado na pasta `out/`.
+O build exporta o site estático para `out/`. O workflow existente em `.github/workflows/deploy.yml` publica essa pasta no GitHub Pages quando há alterações em `main`.
 
-## Publicar no GitHub Pages
+## Configuração
 
-1. Crie um repositório chamado **`devbrunoss.github.io`** na conta GitHub `devbrunoss`.
-2. Envie os arquivos deste projeto para a branch `main`.
-3. No repositório, abra **Settings → Pages** e selecione **GitHub Actions** como fonte de publicação.
-4. O workflow em `.github/workflows/deploy.yml` fará o build e a publicação automaticamente a cada push na `main`.
-5. O endereço esperado é `https://devbrunoss.github.io`.
+- `NEXT_PUBLIC_SITE_URL`: endereço público; padrão `https://brunosantos.site`.
+- `NEXT_PUBLIC_CONTACT_EMAIL`: e-mail de contato; padrão configurado no componente de contato.
+- `src/data/projects.ts`: seleção de projetos, tecnologias, escopo e links.
 
-## Personalização
-
-- A logo enviada foi aplicada em `public/images/logo.png`.
-- O favicon enviado foi aplicado em `public/favicon.png`.
-- As prévias dos projetos são composições ilustrativas; troque-as por capturas reais quando quiser.
-- O e-mail de contato só aparece quando `NEXT_PUBLIC_CONTACT_EMAIL` estiver configurado; nenhum endereço foi inventado.
-- O site não é publicado até você enviar os arquivos e ativar o GitHub Pages.
+Os textos refletem projetos educacionais, desenvolvidos com apoio de IA na estruturação e em partes da implementação. Não representam experiência profissional em TI.
