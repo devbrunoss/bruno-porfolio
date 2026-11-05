@@ -84,7 +84,7 @@ button{font:inherit}
 .project-info{padding:26px 28px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
 .project-meta{width:100%;display:flex;align-items:center;justify-content:space-between;font-size:9px;letter-spacing:.12em;color:#6f6f6f;margin-bottom:16px}
 .featured-label{color:var(--green);border:1px solid #21451d;padding:3px 6px;border-radius:3px}
-.project-info h2{font-size:25px;line-height:1.2;font-weight:500;letter-spacing:-.04em;margin:0 0 12px}
+.project-info h3{font-size:25px;line-height:1.2;font-weight:500;letter-spacing:-.04em;margin:0 0 12px}
 .project-info>p{font-size:12px;line-height:1.85;color:var(--muted);margin:0;max-width:450px}
 .tag-list{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:16px 0 0}
 .tech-pending{font-size:10px!important;color:#656565!important;margin-top:14px!important}
@@ -142,7 +142,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
  .project-card{grid-template-columns:1fr}
  .project-preview{min-height:240px;border-right:0;border-bottom:1px solid var(--border)}
  .project-info{padding:23px}
- .project-info h2{font-size:23px}
+ .project-info h3{font-size:23px}
  .contact-links{grid-template-columns:1fr}
  .contact-topics{grid-template-columns:1fr;gap:25px;margin-top:50px}
  .topic-card{padding-top:17px}
@@ -155,7 +155,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 .about-page{min-height:calc(100svh - 150px);padding-top:28px;padding-bottom:90px}
 .about-intro{position:relative;padding:18px 0 0;max-width:760px}
 .about-kicker{font-family:monospace;font-size:12px;letter-spacing:.04em;color:var(--green);margin:0 0 16px}
-.about-intro h1{font-size:clamp(38px,5vw,54px);font-weight:500;letter-spacing:-.055em;line-height:1.1;margin:0 0 28px}
+.about-intro h2{font-size:clamp(38px,5vw,54px);font-weight:500;letter-spacing:-.055em;line-height:1.1;margin:0 0 28px}
 .about-intro-copy{max-width:590px}
 .about-intro-copy p{font-size:17px;line-height:1.7;color:var(--muted);margin:0 0 12px}
 .about-stats{display:flex;gap:42px;flex-wrap:wrap;margin-top:30px}
@@ -172,7 +172,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 
 
 /* Seção Sobre integrada à página inicial */
-#sobre{scroll-margin-top:90px;border-top:1px solid var(--line);padding-top:72px;margin-top:0}
+#sobre{scroll-margin-top:90px;border-top:1px solid var(--border);padding-top:72px;margin-top:0}
 @media(max-width:760px){#sobre{padding-top:48px}}
 html{scroll-behavior:smooth}
 .project-nav{display:flex;flex-wrap:wrap;gap:10px;margin:-24px 0 48px}
@@ -185,3 +185,19 @@ html{scroll-behavior:smooth}
 .project-section-head .eyebrow{margin-bottom:12px;color:var(--green)}
 .project-section-head h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;letter-spacing:-.05em;font-weight:500;margin:0}
 .project-section-head p:last-child{font-size:13px;line-height:1.8;color:var(--muted);margin:12px 0 0}
+
+.project-highlights{padding-left:17px;margin:16px 0 0;color:#b5b5b5;font-size:12px;line-height:1.9}
+.project-highlights li::marker{color:var(--green)}
+.project-info .project-scope{font-size:11px;color:#a0a0a0;margin-top:18px;border-left:2px solid #36512f;padding-left:12px}
+.preview-label,.preview-note{color:#a5a5a5}
+.preview-subtitle{line-height:1.8;max-width:90%}
+@media(max-width:400px){.heading-count{margin-left:0}.page-heading .eyebrow{flex-wrap:wrap}.hero .eyebrow{letter-spacing:.07em;font-size:10px}.project-links{gap:14px}.contact-link-card strong{overflow-wrap:anywhere}}
+
+.home-projects{padding-bottom:76px}
+.home-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.home-project-card{padding:24px;border:1px solid var(--border);border-radius:10px;background:var(--surface);display:flex;flex-direction:column;align-items:flex-start}
+.home-project-card h3{font-size:22px;font-weight:500;letter-spacing:-.04em;margin:0 0 12px}
+.home-project-card p{font-size:13px;color:var(--muted);margin:0 0 24px}
+.home-project-card .text-link{margin-top:auto}
+.all-projects{margin-top:26px}
+@media(max-width:760px){.home-project-grid{grid-template-columns:1fr}.home-projects{padding-bottom:48px}}

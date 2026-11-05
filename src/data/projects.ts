@@ -1,216 +1,70 @@
-export type ProjectCategory = "fullstack" | "ciberseguranca" | "web";
-
-export type CategoryInfo = {
-  id: ProjectCategory;
-  title: string;
-  eyebrow: string;
-  description: string;
-};
-
-// A ordem desta lista define a ordem das seções na página
+export type ProjectCategory = "ciberseguranca" | "fullstack";
+export type CategoryInfo = { id: ProjectCategory; title: string; eyebrow: string; description: string };
 export const categories: CategoryInfo[] = [
-  {
-    id: "fullstack",
-    title: "Full Stack",
-    eyebrow: "APLICAÇÕES COMPLETAS",
-    description:
-      "Aplicações com autenticação, banco de dados e deploy, cobrindo do front-end ao back-end.",
-  },
-  {
-    id: "ciberseguranca",
-    title: "Cibersegurança",
-    eyebrow: "SEGURANÇA DEFENSIVA",
-    description:
-      "Projetos focados em práticas defensivas, análise de segurança web e monitoramento de logs.",
-  },
-  {
-    id: "web",
-    title: "Desenvolvimento Web",
-    eyebrow: "FRONT-END",
-    description:
-      "Interfaces e experimentos com HTML, CSS e JavaScript, focados em layout, interatividade e experiência do usuário.",
-  },
+  { id: "ciberseguranca", title: "Cibersegurança", eyebrow: "SEGURANÇA DEFENSIVA E APPSEC", description: "Ferramentas educacionais para análise de logs, possíveis segredos e configurações HTTP/HTTPS. Os achados exigem revisão humana." },
+  { id: "fullstack", title: "Desenvolvimento Full Stack", eyebrow: "APLICAÇÕES WEB", description: "Projetos para estudar autenticação, validação no servidor e controle de acesso por usuário." },
 ];
-
 export type Project = {
   slug: string;
   category: ProjectCategory;
   name: string;
   description: string;
-  url: string;
-  repository?: string;
-  technologies?: string[];
+  url?: string;
+  repository: string;
+  technologies: string[];
   previewTitle: string;
   previewSubtitle: string;
   mark: string;
   featured?: boolean;
+  scope: string;
+  highlights: string[];
 };
-
 export const projects: Project[] = [
   {
-    slug: "trackcrypto",
-    category: "web",
-    name: "TrackCrypto",
-    description:
-      "Projeto voltado ao mercado de criptomoedas, com uma interface dedicada ao acompanhamento do mercado e à apresentação de informações relacionadas a ativos digitais.",
-    url: "https://devbrunoss.github.io/trackcrypto/",
-    repository: "https://github.com/devbrunoss/trackcrypto",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewTitle: "TrackCrypto",
-    previewSubtitle: "CRYPTO MARKET / ASSETS",
-    mark: "₿",
-    featured: true,
-  },
-  {
-    slug: "qual-jogo-hoje",
-    category: "web",
-    name: "Qual Jogo Hoje",
-    description:
-      "Aplicação interativa criada para ajudar jogadores a decidir o que jogar, explorando lógica de programação, interatividade e experiência do usuário.",
-    url: "https://devbrunoss.github.io/qual-jogo-hoje/",
-    repository: "https://github.com/devbrunoss/qual-jogo-hoje",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewTitle: "Qual jogo hoje?",
-    previewSubtitle: "ENCONTRE SUA PRÓXIMA PARTIDA",
-    mark: "?",
-  },
-  {
-    slug: "infinity-electronics",
-    category: "web",
-    name: "Infinity Electronics",
-    description:
-      "Projeto demonstrativo de uma loja de tecnologia, com foco na apresentação de produtos, organização de catálogo e experiência visual de um e-commerce.",
-    url: "https://devbrunoss.github.io/infinityeletronics/",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewTitle: "Infinity Electronics",
-    previewSubtitle: "TECH / CATALOG",
-    mark: "∞",
-  },
-  {
-    slug: "dopamine-clicker",
-    category: "web",
-    name: "Dopamine Clicker",
-    description:
-      "Mini game experimental baseado em cliques, desenvolvido para explorar interatividade, pontuação e elementos de gamificação.",
-    url: "https://devbrunoss.github.io/DOPAMINE-CLICKER/",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewTitle: "Dopamine Clicker",
-    previewSubtitle: "CLICK / SCORE / REPEAT",
-    mark: "+",
-  },
-  {
-    slug: "bsdev-store",
-    category: "web",
-    name: "BSDev Store",
-    description:
-      "Landing page demonstrativa com foco na apresentação visual de produtos de tecnologia, animações, composição de layout e elementos promocionais.",
-    url: "https://devbrunoss.github.io/landing-page-animacoes/",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewTitle: "BSDev Store",
-    previewSubtitle: "TECH GOODS / FEATURED",
-    mark: "BS",
-  },
-  {
-    slug: "devtask",
-    category: "fullstack",
-    name: "DevTask",
-    description:
-      "Aplicação Full Stack para organização de tarefas, com autenticação, validação de dados e persistência em banco de dados relacional.",
-    url: "https://devtask-sigma.vercel.app/",
-    repository: "https://github.com/devbrunoss/devtask",
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Prisma",
-      "PostgreSQL",
-      "SQL",
-      "Zod",
-      "bcrypt",
-    ],
-    previewTitle: "DevTask",
-    previewSubtitle: "FULL STACK / TASK MANAGEMENT",
-    mark: "DT",
-    featured: true,
-  },
-  {
-    slug: "financeflow",
-    category: "fullstack",
-    name: "FinanceFlow",
-    description:
-      "Aplicação Full Stack de gestão financeira, com interface para acompanhamento de informações financeiras e recursos de autenticação e persistência de dados.",
-    url: "https://financeflow-sable-pi.vercel.app/dashboard",
-    repository: "https://github.com/devbrunoss/financeflow",
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Prisma",
-      "SQL",
-      "PostgreSQL",
-      "Better Auth",
-      "Zod",
-      "Vitest",
-      "Recharts",
-    ],
-    previewTitle: "FinanceFlow",
-    previewSubtitle: "FULL STACK / FINANCIAL MANAGEMENT",
-    mark: "F$",
-    featured: true,
-  },
-  {
-    slug: "secrethunter",
-    category: "ciberseguranca",
-    name: "SecretHunter",
-    description:
-      "Ferramenta defensiva em Python para identificar possíveis credenciais expostas em arquivos e no histórico Git, com resultados mascarados e relatórios em JSON e SARIF.",
-    url: "https://devbrunoss.github.io/SecretHunter/",
+    slug: "secrethunter", category: "ciberseguranca", name: "SecretHunter",
+    description: "CLI em Python para identificar possíveis segredos em arquivos e no histórico Git. Inclui ocultação de valores, baseline para comparação e relatórios JSON/SARIF.",
     repository: "https://github.com/devbrunoss/SecretHunter",
     technologies: ["Python", "Git", "JSON", "SARIF"],
-    previewTitle: "SecretHunter",
-    previewSubtitle: "SECRET DETECTION / CODE SECURITY",
-    mark: "SH",
-    featured: true,
+    previewTitle: "SecretHunter", previewSubtitle: "ARQUIVOS → ACHADOS → TRIAGEM", mark: "SH", featured: true,
+    scope: "Não valida se uma credencial está ativa. Falsos positivos e falsos negativos são esperados.",
+    highlights: ["Arquivos e histórico Git", "Relatórios com valores ocultados", "Baseline e testes automatizados"],
   },
   {
-    slug: "websecure",
-    category: "ciberseguranca",
-    name: "WebSecure",
-    description:
-      "Projeto de segurança web desenvolvido com Python e Flask, com foco em práticas defensivas, análise de aspectos de segurança e apresentação de resultados.",
-    url: "https://websecure-78zh.onrender.com/",
-    repository: "https://github.com/devbrunoss/websecure",
-    technologies: ["Python", "Flask", "HTML", "CSS", "JSON", "Pytest"],
-    previewTitle: "WebSecure",
-    previewSubtitle: "WEB SECURITY / DEFENSIVE PRACTICES",
-    mark: "WS",
-    featured: true,
-  },
-  {
-    slug: "forenselab",
-    category: "ciberseguranca",
-    name: "ForenseLab",
-    description:
-      "Plataforma de investigação digital para organizar casos e evidências, acompanhar sua integridade e manter a rastreabilidade das análises em um ambiente de demonstração.",
-    url: "https://forenselab-web.onrender.com/",
-    previewTitle: "ForenseLab",
-    previewSubtitle: "DIGITAL FORENSICS / EVIDENCE MANAGEMENT",
-    mark: "FL",
-  },
-  {
-    slug: "logsentinel",
-    category: "ciberseguranca",
-    name: "LogSentinel",
-    description:
-      "Ferramenta de análise de logs com Python e Streamlit, voltada à exploração de registros, organização de eventos e identificação de padrões relevantes para monitoramento.",
-    url: "https://logsentinel-devbrunoss.streamlit.app/",
+    slug: "logsentinel", category: "ciberseguranca", name: "LogSentinel",
+    description: "Analisador local de logs CSV/JSONL, com interface Streamlit e regras determinísticas para falhas de autenticação, concentração de eventos e condições personalizadas.",
     repository: "https://github.com/devbrunoss/logsentinel",
-    technologies: ["Python", "Streamlit", "Pandas", "CSV", "JSON Lines", "Pytest"],
-    previewTitle: "LogSentinel",
-    previewSubtitle: "LOG ANALYSIS / SECURITY MONITORING",
-    mark: "LS",
-    featured: true,
+    technologies: ["Python", "Streamlit", "Pandas", "pytest"],
+    previewTitle: "LogSentinel", previewSubtitle: "LOGS → REGRAS → ALERTAS", mark: "LS", featured: true,
+    scope: "Utiliza logs de laboratório. Um alerta é uma pista para revisão, não uma confirmação de ataque.",
+    highlights: ["Normalização de eventos em UTC", "Regras com janelas configuráveis", "Exportação CSV e JSON"],
+  },
+  {
+    slug: "websecure", category: "ciberseguranca", name: "WebSecure",
+    description: "Scanner defensivo de configuração HTTP/HTTPS. Analisa cabeçalhos de segurança e atributos de cookies, valida destinos e redirecionamentos e exporta relatórios JSON/HTML.",
+    repository: "https://github.com/devbrunoss/websecure",
+    technologies: ["Python", "HTTP/HTTPS", "JSON", "pytest"],
+    previewTitle: "WebSecure", previewSubtitle: "HTTP/HTTPS → ANÁLISE → RELATÓRIO", mark: "WS", featured: true,
+    scope: "Para sites próprios ou autorizados. Os achados são heurísticos e não comprovam vulnerabilidades exploráveis.",
+    highlights: ["Cabeçalhos e atributos de cookies", "Validação de destinos e redirects", "CLI e interface local"],
+  },
+  {
+    slug: "devtask", category: "fullstack", name: "DevTask",
+    description: "Organização de tarefas por status, prioridade, categoria e prazo. Explora autenticação por sessão, validação no servidor e dados isolados por usuário.",
+    url: "https://devtask-sigma.vercel.app/",
+    repository: "https://github.com/devbrunoss/devtask",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
+    previewTitle: "DevTask", previewSubtitle: "TAREFAS / CATEGORIAS / PRAZOS", mark: "DT",
+    scope: "Projeto educacional sem recuperação de senha ou MFA. Use dados fictícios na demonstração.",
+    highlights: ["Sessões e senhas com hash", "Controle de acesso no servidor", "Testes unitários e de fluxos críticos"],
+  },
+  {
+    slug: "financeflow", category: "fullstack", name: "FinanceFlow",
+    description: "Controle financeiro pessoal com receitas, despesas, orçamentos e metas. Utiliza cálculos com precisão decimal, autenticação e exportação de transações em CSV.",
+    url: "https://financeflow-sable-pi.vercel.app/",
+    repository: "https://github.com/devbrunoss/financeflow",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Better Auth", "Vitest"],
+    previewTitle: "FinanceFlow", previewSubtitle: "RECEITAS / DESPESAS / METAS", mark: "F$",
+    scope: "Registros manuais, sem conexão com bancos ou movimentação de dinheiro. Use dados fictícios na demonstração.",
+    highlights: ["Orçamentos por categoria", "Metas e contribuições", "Validação e testes de regras financeiras"],
   },
 ];

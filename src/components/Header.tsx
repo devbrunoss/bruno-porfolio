@@ -22,7 +22,7 @@ export function Header() {
         <img src="/images/logo.png" alt="" className="brand-image" />
       </Link>
       <nav className={`main-nav ${menuOpen ? "nav-open" : ""}`} aria-label="Navegação principal">
-        {links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href || (link.href === "/#sobre" && pathname === "/sobre") ? "page" : undefined} className={pathname === link.href || (link.href === "/#sobre" && pathname === "/sobre") ? "active" : ""}>{link.label}</Link>)}
+        {links.map(link => <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} aria-current={pathname === link.href || (link.href === "/#sobre" && pathname === "/sobre") ? "page" : undefined} className={pathname === link.href || (link.href === "/#sobre" && pathname === "/sobre") ? "active" : ""}>{link.label}</Link>)}
       </nav>
       <button className="mobile-menu" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(v => !v)}>{menuOpen ? <X size={21}/> : <Menu size={21}/>}</button>
     </div>
